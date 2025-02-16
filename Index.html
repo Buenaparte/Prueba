@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>JUEGA SIMON SAYS!</title>
+</head>
+<body>
+    <h1>Menu</h1>
+    <main>
+        <section class="Nombre">
+            <div class="Nombre_Poner">
+                <h1 class="Nombre_Titulo">Coloque Nombre</h1><br> 
+                <label for="Apodo">Nombre</label><br><br>
+                <input type="text" id="Apodo" name="Apodo" value=" " ><br><br>
+                <input type="submit" value="Submit" class="final"><br><br>
+            </div>
+        </section>
+        <a class="Primer " href="#">Registrarse</a><br>
+        <a class="Segundo" href="#">Puntuaje</a><br>
+        <a class="Tercero" href="Juego.html">Jugar</a>
+        <div id="puntuacion-menu" style="display: none;">
+            <p>Tu puntaje más alto: <span id="highscore-menu">0</span></p>
+            <button id="cerrar-puntuacion">Cerrar</button>
+        </div>
+    </main>
+    <script src="logica.js"></script>
+</body>
+</html>

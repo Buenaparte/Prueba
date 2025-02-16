@@ -1,0 +1,260 @@
+body {
+    background-color: #f0f0f0;
+    font-family: 'DejaVu Sans Mono', monospace;
+    text-align: center;
+    color: #333;
+    overflow: hidden;
+}
+
+h1 {
+    background-color: #c8e6c9;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 48px;
+    animation: titleFadeIn 1s forwards;
+}
+
+#game {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 20px;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.color-button {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    cursor: pointer;
+    opacity: 0.8;
+    animation: buttonIdle 2s infinite;
+}
+
+#green {
+    background-color: green;
+}
+
+#red {
+    background-color: red;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#start-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #555;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    margin-top: 20px;
+    animation: buttonFadeIn 1s forwards;
+}
+
+#start-button:hover {
+    background-color: #777;
+}
+
+/* Animaciones */
+@keyframes flashSequence {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes flashClick {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes buttonIdle {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes titleFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes errorShake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-20px);
+    }
+    40% {
+        transform: translateX(20px);
+    }
+    60% {
+        transform: translateX(-15px);
+    }
+    80% {
+        transform: translateX(15px);
+    }
+}
+
+.sequence-active {
+    animation: flashSequence 0.6s;
+}
+
+.click-active {
+    animation: flashClick 0.3s;
+}
+
+body.error {
+    animation: errorShake 0.5s;
+}
+
+
+.Nombre,
+.Fin,
+.Tercero {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.Nombre-show,
+.Fin-show,
+.Tercero-show {
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity 0.3s ease;
+}
+
+.verde {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    text-align: left;
+    margin-top: 15px;
+    border: 1px solid black;
+}
+
+.cols,
+.cols2 {
+    display: flex;
+}
+
+.amarillo {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    text-align: left;
+    margin-top: 15px;
+    border: 1px solid black;
+}
+
+.rojo {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    text-align: right;
+    margin-left: 15px;
+    margin-top: 15px;
+    border: 1px solid black;
+}
+
+.azul {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    text-align: right;
+    margin-left: 15px;
+    margin-top: 15px;
+    border: 1px solid black;
+}
+
+.brillar {
+    opacity: 0;
+}
+
+/* Estilos para la sección Fin del Juego */
+.Fin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.Fin-show {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.Nombre_Poner {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.Titulo {
+    /* Estilos para el título Fin del Juego */
+}
+
+.Cuarto, .Quinto {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Estilos para los botones Reiniciar y Comenzar */
+.Reiniciar, .Comenzar {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
